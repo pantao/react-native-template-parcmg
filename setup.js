@@ -18,7 +18,7 @@ const writeFile = (filename, data) => fs.writeFileSync(path.join(__dirname, file
 
 // Merge package.json
 const packageJSON = JSON.parse(readFile('package.json'))
-const dependencies = JSON.parse(readFile('dependencies.json'))
+const dependencies = JSON.parse(readFile('./dependencies.json'))
 packageJSON.dependencies = Object.assign({}, packageJSON.dependencies, dependencies)
 const updatedPackageJSON = Object.assign({}, packageJSON, templatePackageJSON)
 delete updatedPackageJSON.jest
