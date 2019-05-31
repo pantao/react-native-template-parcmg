@@ -1,0 +1,10 @@
+{
+  "@types/react-navigation": "latest",
+  "hoist-non-react-statics": "latest",
+  "react-native-gesture-handler": "latest",
+  "react-navigation": "latest",
+  "react-navigation-tabs": "latest",
+  "react-redux": "latest",
+  "redux": "latest",
+  "redux-persist": "latest"
+}

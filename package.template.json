@@ -11,17 +11,5 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": ["prettier --write", "tslint --fix", "git add"]
-  },
-  "dependencies": {
-    "@types/react-navigation": "latest",
-    "hoist-non-react-statics": "latest",
-    "react": "latest",
-    "react-native": "latest",
-    "react-native-gesture-handler": "latest",
-    "react-navigation": "latest",
-    "react-navigation-tabs": "latest",
-    "react-redux": "latest",
-    "redux": "latest",
-    "redux-persist": "latest"
   }
 }
