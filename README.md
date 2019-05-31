@@ -2,7 +2,9 @@
 
 **Start a new React Native project with TypeScript, Prettier & TSLint**
 
-### Usage
+<p style="color: red">DO NOT INSTALL THIS PACKAGE DIRECTLY</p>
+
+## Usage
 
 When creating a new React Native project, use the command:
 
@@ -18,7 +20,7 @@ That's it! 🎉 Then, proceed as usual:
 
 - `react-native run-ios`
 
-### Includes
+## Includes
 
 - [x] TypeScript
 - [x] Prettier (with commit hook)
@@ -28,6 +30,6 @@ That's it! 🎉 Then, proceed as usual:
 - [x] Redux-Saga
 - [x] React-Navigation
 
-### Requirements
+## Requirements
 
 - `npm i -g react-native-cli`
