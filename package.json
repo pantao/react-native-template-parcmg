@@ -1,0 +1,29 @@
+{
+  "name": "react-native-template-parcmg",
+  "version": "0.0.2-development",
+  "description": "Start new React Native projects with TypeScript, Prettier & TSLint",
+  "license": "MIT",
+  "author": "Pan Tao <ofcrab@gmail.com>",
+  "homepage": "https://github.com/pantao/react-native-template-parcmg",
+  "bugs": {
+    "url": "https://github.com/pantao/react-native-template-parcmg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pantao/react-native-template-parcmg.git"
+  },
+  "keywords": [
+    "react-native",
+    "typescript",
+    "prettier",
+    "template",
+    "jest",
+    "boilerplate",
+    "ts",
+    "redux",
+    "react-redux",
+    "saga",
+    "redux-saga",
+    "react-navigation"
+  ]
+}
