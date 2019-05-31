@@ -9,8 +9,8 @@ When creating a new React Native project, use the command:
 ```bash
 react-native init projectname --template parcmg
 cd projectname
+node setup.js
 npm install
-react-native link react-navigation
 react-native link react-native-gesture-handler
 ```
 
