@@ -2,6 +2,7 @@
   "@babel/core": "latest",
   "@babel/runtime": "latest",
   "@types/jest": "latest",
+  "@types/node": "latest",
   "@types/react": "latest",
   "@types/react-native": "latest",
   "@types/react-navigation": "latest",

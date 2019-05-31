@@ -3,15 +3,16 @@ import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 
 import { connect } from 'react-redux'
 
-export const RootDrawer = connect(({ app }: { [option: string]: any }) => ({ ...app }))(
-  ({ version }) => (
-    <View style={styles.container}>
-      <Text style={styles.title}>Root Drawer</Text>
-      <Text style={styles.instructions}>💙</Text>
-      <Text style={styles.instructions}>Version: {version}</Text>
-    </View>
-  ),
-)
+export const RootDrawer = connect(({ todo }: { [option: string]: any }) => ({
+  todosCount: todo.todos.length,
+}))(({ todosCount }) => (
+  <View style={styles.container}>
+    <Text style={styles.title}>Root Drawer</Text>
+    <Text style={styles.instructions}>
+      {todosCount ? `You have ${todosCount} todos.` : 'Your todo list is empty.'}
+    </Text>
+  </View>
+))
 
 const styles = StyleSheet.create({
   container: {

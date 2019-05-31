@@ -1,8 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 import { NavigationScreenComponent } from 'react-navigation'
 
 import { connect } from 'react-redux'
+
+import { TouchableItem } from '../ui'
 
 interface IProps {
   version: string
@@ -21,16 +23,16 @@ const DetailScreen: NavigationScreenComponent<IProps, State> = ({ version, navig
     })
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Order Tab</Text>
+      <Text style={styles.title}>Detail {deep}</Text>
       <Text style={styles.instructions}>TypeScript + Prettier configured</Text>
       <Text style={styles.instructions}>To get started, edit App.jsx</Text>
       <Text style={styles.instructions}>💙</Text>
       <Text style={styles.instructions}>Version: {version}</Text>
-      <TouchableOpacity onPress={handlePressDetail}>
+      <TouchableItem onPress={handlePressDetail}>
         <View style={styles.button}>
-          <Text style={styles.buttonLabel}>Detail Deep {deep}</Text>
+          <Text style={styles.buttonLabel}>Go deeper</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableItem>
     </View>
   )
 }

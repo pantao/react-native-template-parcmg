@@ -1,8 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 import { NavigationScreenComponent } from 'react-navigation'
 
 import { connect } from 'react-redux'
+
+import { TouchableItem } from '../../ui'
 
 interface IProps {
   version: string
@@ -19,11 +21,11 @@ const HomeScreen: NavigationScreenComponent<IProps, State> = ({ version, navigat
       <Text style={styles.instructions}>To get started, edit App.jsx</Text>
       <Text style={styles.instructions}>💙</Text>
       <Text style={styles.instructions}>Version: {version}</Text>
-      <TouchableOpacity onPress={handlePressHome}>
+      <TouchableItem onPress={handlePressHome}>
         <View style={styles.button}>
           <Text style={styles.buttonLabel}>Detail</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableItem>
     </View>
   )
 }

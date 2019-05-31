@@ -1,6 +1,6 @@
 {
   "name": "react-native-template-parcmg",
-  "version": "0.0.8-development",
+  "version": "0.0.9-development",
   "description": "Start new React Native projects with TypeScript, Prettier & TSLint",
   "license": "MIT",
   "author": "Pan Tao <ofcrab@gmail.com>",

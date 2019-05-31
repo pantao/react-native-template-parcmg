@@ -1,8 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
 import { NavigationScreenComponent } from 'react-navigation'
 
 import { connect } from 'react-redux'
+
+import { TodoItem } from '../../components'
+import { TouchableItem } from '../../ui'
 
 interface IProps {
   version: string
@@ -17,7 +20,7 @@ const TodoScreen: NavigationScreenComponent<IProps, State> = ({ todos, dispatch 
       payload: `Aha insight! ${todos.length}`,
     })
 
-  const handlePressRemove = id => {
+  const handlePressRemove = ({ id }) => {
     dispatch({
       type: '@@TODOS/REMOVE',
       payload: id,
@@ -29,16 +32,14 @@ const TodoScreen: NavigationScreenComponent<IProps, State> = ({ todos, dispatch 
       <Text style={styles.instructions}>
         Add one, and reload your app. The content should still be here.
       </Text>
-      {todos.map(({ id, content }) => (
-        <TouchableOpacity key={id} onPress={() => handlePressRemove(id)}>
-          <Text style={styles.instructions}>{content}</Text>
-        </TouchableOpacity>
+      {todos.map(todo => (
+        <TodoItem {...todo} onPress={handlePressRemove} key={todo.id} />
       ))}
-      <TouchableOpacity onPress={handlePressAdd}>
+      <TouchableItem onPress={handlePressAdd}>
         <View style={styles.button}>
           <Text style={styles.buttonLabel}>Add</Text>
         </View>
-      </TouchableOpacity>
+      </TouchableItem>
     </View>
   )
 }
@@ -63,6 +64,15 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 6,
   } as TextStyle,
+
+  todo: {
+    height: 30,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#ddd',
+  },
 
   button: {
     padding: 15,
