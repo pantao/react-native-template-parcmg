@@ -1,6 +1,7 @@
+import pkg from '../../package.json'
 const getInitialState = () => {
   return {
-    version: '0.0.0-development',
+    version: pkg.version,
   }
 }
 

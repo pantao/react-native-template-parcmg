@@ -13,6 +13,7 @@ import { Signup as AuthSignup } from './screens/Auth/Signup'
 
 import { Home as RootTabsHome } from './screens/RootTabs/Home'
 import { Me as RootTabsMe } from './screens/RootTabs/Me'
+import { Todo as RootTabsTodo } from './screens/RootTabs/Todo'
 
 import { Detail } from './screens/Detail'
 
@@ -42,6 +43,15 @@ const RootTabs = createBottomTabNavigator({
       return {
         title: 'Home',
         label: 'Home',
+      }
+    },
+  },
+  TodoTab: {
+    screen: RootTabsTodo,
+    navigationOptions: () => {
+      return {
+        title: 'Todo',
+        label: 'Todo',
       }
     },
   },

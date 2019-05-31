@@ -1,20 +1,26 @@
-import { createStore, applyMiddleware, compose } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 
-import { AsyncStorage } from 'react-native'
+import AsyncStorage from '@react-native-community/async-storage'
 
-import { persistStore, persistCombineReducers } from 'redux-persist'
+import { createLogger } from 'redux-logger'
+import { persistReducer, persistStore } from 'redux-persist'
 
-import * as reducers from '../reducers'
+import rootReducer from '../reducers'
 
-const combinedReducers = persistCombineReducers(
+const combinedReducers = persistReducer(
   {
     key: 'parcmg',
     storage: AsyncStorage,
+    debug: true,
   },
-  reducers,
+  rootReducer,
 )
 
 const middlewares = []
+
+if (__DEV__) {
+  middlewares.push(createLogger({ timestamp: true }))
+}
 
 export const store = applyMiddleware(...middlewares)(createStore)(combinedReducers)
 export const persistor = persistStore(store)
